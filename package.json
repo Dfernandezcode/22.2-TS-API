@@ -1,0 +1,42 @@
+{
+  "name": "node-s4-solution-complete-crud",
+  "version": "1.0.0",
+  "description": "Mongoo first steps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "normalize:books": "node ./normalization/book.normalization.js ",
+    "normalize:authors": "node ./normalization/author.normalization.js ",
+    "seed:authors": "node ./seeds/author.seed.js",
+    "seed:books": "node ./seeds/book.seed.js",
+    "seed:book-relations": "node ./seeds/book-relations.seed.js",
+    "seed:all": "npm run seed:authors && npm run seed:books && npm run seed:book-relations",
+    "start": "node --watch index.js",
+    "lint": "eslint .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "typescript": "^5.0.4"
+  },
+  "author": "Fran Linde",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "multer": "^1.4.5-lts.1",
+    "validator": "^13.9.0"
+  }
+}
