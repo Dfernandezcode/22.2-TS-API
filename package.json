@@ -13,10 +13,13 @@
     "seed:all": "npm run seed:authors && npm run seed:books && npm run seed:book-relations",
     "start": "node --watch index.js",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "tanspile": "tsc",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@types/express": "^4.17.17",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "eslint": "^8.41.0",
     "eslint-config-standard": "^17.0.0",
@@ -27,9 +30,12 @@
     "husky": "^8.0.0",
     "typescript": "^5.0.4"
   },
-  "author": "Fran Linde",
+  "author": "Daniel Fernandez",
   "license": "ISC",
   "dependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/dotenv": "^8.2.0",
+    "@types/mongoose": "^5.11.97",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
